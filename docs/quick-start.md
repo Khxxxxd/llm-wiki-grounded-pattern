@@ -19,6 +19,12 @@
 
 انسخ [AGENTS.md](../AGENTS.md) إلى مشروعك.
 
+أو انسخه ثم أعد تسميته إلى:
+
+- `CODEX.md`
+- `CLAUDE.md`
+- `GEMINI.md`
+
 هذا مو ملف إضافي.
 
 هذا فعليًا اللي يحمي النظام من الانزلاق.
@@ -118,7 +124,10 @@ knowledge-base/
 │   ├── sources/
 │   ├── syntheses/
 │   └── provisional/
-└── AGENTS.md
+├── AGENTS.md
+├── CODEX.md
+├── CLAUDE.md
+└── GEMINI.md
 ```
 
 ## إذا ودك تبدأ بأقل نسخة ممكنة

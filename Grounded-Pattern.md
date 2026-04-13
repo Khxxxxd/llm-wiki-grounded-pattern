@@ -2,7 +2,7 @@
 
 A pattern for building personal knowledge bases using LLMs, balancing the power of structured accumulation with the safety of raw evidence.
 
-This file explains the pattern at a high level. It is not the operating manual. The strict execution rules belong in `AGENTS.md` or `CLAUDE.md`.
+This file explains the pattern at a high level. It is not the operating manual. The strict execution rules belong in a separate schema file such as `AGENTS.md`, `CODEX.md`, `CLAUDE.md`, or `GEMINI.md`.
 
 ## The core idea
 
@@ -50,7 +50,7 @@ Recommended page types:
 
 ### 3. The schema
 
-A file such as `AGENTS.md` or `CLAUDE.md` that defines:
+A file such as `AGENTS.md`, `CODEX.md`, `CLAUDE.md`, or `GEMINI.md` that defines:
 
 - operating rules
 - trust boundaries

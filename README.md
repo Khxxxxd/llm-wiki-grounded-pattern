@@ -17,9 +17,11 @@
 - [Grounded-Pattern.md](./Grounded-Pattern.md)
   هذا ملف الـ pattern نفسه. يشرح الفكرة بشكل high-level ونظيف.
 - [AGENTS.md](./AGENTS.md)
-  هذا ملف التشغيل. فيه القواعد اللي تمنع النموذج يرجع لنفس أخطاء النسخة القديمة.
+  هذا ملف تشغيل عام. تقدر تستخدمه كما هو أو تعيد تسميته إلى `CODEX.md` أو `CLAUDE.md` أو `GEMINI.md` حسب أداتك.
 - [docs/quick-start.md](./docs/quick-start.md)
   هذا شرح عملي سريع: شلون تبدأ، وشنو تسوي من أول يوم.
+- [docs/implementation-playbook.md](./docs/implementation-playbook.md)
+  هذا الجزء العملي الحقيقي. فيه workflow واضح: شلون تدخل مصدر، شلون تسأل، شلون تحفظ، ومتى توقف النموذج.
 - [templates](./templates)
   قوالب جاهزة لصفحات الويكي.
 - [examples](./examples)
@@ -91,7 +93,9 @@
 يعني ملف مثل:
 
 - `AGENTS.md`
+- أو `CODEX.md`
 - أو `CLAUDE.md`
+- أو `GEMINI.md`
 
 وهذا أهم ملف في المشروع كله، لأن هو اللي يقول للنموذج:
 
@@ -140,6 +144,13 @@
 
 - [AGENTS.md](./AGENTS.md)
 
+ثم سمّه حسب بيئتك:
+
+- `AGENTS.md`
+- `CODEX.md`
+- `CLAUDE.md`
+- `GEMINI.md`
+
 ثم عدل المسارات والقواعد حسب شغلك.
 
 ### إذا تبي تبدأ بسرعة
@@ -147,6 +158,7 @@
 امش على:
 
 - [docs/quick-start.md](./docs/quick-start.md)
+- [docs/implementation-playbook.md](./docs/implementation-playbook.md)
 
 ## أهم قاعدة
 
@@ -182,13 +194,17 @@ knowledge-base/
 │   ├── sources/
 │   ├── syntheses/
 │   └── provisional/
-└── AGENTS.md
+├── AGENTS.md
+├── CODEX.md
+├── CLAUDE.md
+└── GEMINI.md
 ```
 
 ## شنو لازم تسويه الحين؟
 
 1. انسخ `Grounded-Pattern.md` كمرجع للفكرة.
-2. انسخ `AGENTS.md` كقاعدة تشغيل للنموذج.
+2. انسخ schema file مناسب لأداتك:
+   `AGENTS.md` أو `CODEX.md` أو `CLAUDE.md` أو `GEMINI.md`
 3. ابنِ مجلد `raw/` منفصل وواضح.
 4. استخدم القوالب داخل `templates/`.
 5. ابدأ بـ `index.md` و`log.md` و`conflicts.md`.
