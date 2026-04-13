@@ -12,6 +12,20 @@
 - `wiki` تصير طبقة تنظيم وربط
 - الإجابة المهمة ترجع للمصدر الخام قبل ما تعتمد عليها
 
+```text
+[User Question]
+       |
+       v
+[Wiki / Index / Concept Pages]
+       |
+       | routes attention
+       v
+[Raw Sources / Ground Truth]
+       |
+       v
+[Final Answer]
+```
+
 ## شنو تلقى هني؟
 
 - [Grounded-Pattern.md](./Grounded-Pattern.md)
@@ -176,6 +190,16 @@
 
 أما الكلام العابر، خله عابر.
 
+إذا تبي شيء ينحفظ فعلًا، خلك صريح مع النموذج.
+
+مثال:
+
+- `Promote this to wiki`
+- `Save this as stable-synthesis`
+- `Convert this into a concept page`
+
+غير هذا، الأصل أن الجواب يظل ephemeral.
+
 ## هيكل مقترح للمجلدات
 
 ```text
@@ -209,6 +233,20 @@ knowledge-base/
 4. استخدم القوالب داخل `templates/`.
 5. ابدأ بـ `index.md` و`log.md` و`conflicts.md`.
 6. لا تسمح للويكي أن يصير بديل عن المصدر.
+
+## متى ما تستخدم هالpattern؟
+
+مو كل use case يحتاج هالهيكلة.
+
+غالبًا لا تستخدمه إذا:
+
+- مصادرك تتغير كل ساعة أو كل يوم مثل الأخبار السريعة
+- تبي جواب سريع لمرة وحدة فقط
+- ما عندك corpus فعلي يتراكم مع الوقت
+- ما عندك استعداد تحافظ على `raw/` و`wiki/` وschema بشكل منفصل
+- استخدامك كله ad-hoc وما فيه حاجة إلى synthesis يتكرر
+
+في هالحالات، `RAG` بسيط أو notes مرتبة قد تكون أهدأ وأفضل.
 
 ## آخر كلام
 

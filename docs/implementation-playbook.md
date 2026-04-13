@@ -64,6 +64,8 @@
 6. إذا ظهر تعارض مع مصدر قديم، سجله في `conflicts.md`
 7. أضف سطر في `log.md`
 
+إذا احتجت تلمس أكثر من 3 صفحات `entity/concept`، وقف وخل النموذج يستأذن أول.
+
 ### مثال prompt
 
 ```text
@@ -73,7 +75,7 @@ Update index.md.
 Update only the most relevant concept or entity page if necessary.
 If the source conflicts with older material, record it in conflicts.md.
 Append a short ingest entry to log.md.
-Do not perform broad multi-page rewrites without asking first.
+If this would require touching more than 3 concept/entity pages, stop and ask first.
 ```
 
 ## ثالثًا: شلون تسأل النظام
@@ -144,11 +146,20 @@ If the evidence is incomplete or conflicting, say that clearly.
 - تحليل أولي
 - answer مبني على سياق جلسة فقط
 
+والأصل إن النموذج ما يقترح الحفظ كل مرة.
+
+إذا ودك تحفظ شيء، استخدم trigger واضح مثل:
+
+- `Promote this to wiki`
+- `Save this as stable-synthesis`
+- `Convert this into a concept page`
+
 ### مثال prompt
 
 ```text
 Do not save this answer automatically.
 Only suggest promotion if the output is durable, source-linked, and likely to be reused.
+Otherwise keep it ephemeral unless I explicitly say: "Promote this to wiki" or "Save this as stable-synthesis".
 If promoted, label it with the correct page type.
 ```
 
@@ -213,6 +224,24 @@ Validate important claims against raw sources.
 إذا كل مصدر جديد بدأ يلمس عشر صفحات، وقف.
 
 هذا معناته إن الـ ingest قاعد يكبر أكثر من اللازم.
+
+ونفس الشي مع `index.md`.
+
+إذا بدأ يكبر لدرجة صار ثقيل في القراءة والتحديث، لا تكابر.
+
+قسّمه إلى sub-indexes حسب:
+
+- السنة
+- المجال
+- الفئة
+
+مثل:
+
+- `index-2024.md`
+- `index-research.md`
+- `index-vendors.md`
+
+وخلك محافظ على `index.md` الرئيسي كصفحة routing فقط.
 
 ## الزبدة التشغيلية
 
